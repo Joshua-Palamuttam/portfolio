@@ -7,11 +7,17 @@ const contact = () => {
       <section className="contact-page">
         <article className="contact-form">
           <h3>Get in Touch</h3>
-          <form>
+          <form action="https://formspree.io/xqkygprp" method="POST">
             <div className="form-group">
-              <input type="text" placeholder="name" className="form-control" />
+              <input
+                type="text"
+                name="name"
+                placeholder="name"
+                className="form-control"
+              />
               <input
                 type="email"
+                name="email"
                 placeholder="email"
                 className="form-control"
               />
@@ -22,7 +28,7 @@ const contact = () => {
                 className="form-control"
               ></textarea>
             </div>
-            <button type="submit" className="submit-btn btn">
+            <button type="submit" className="submit-btn btn" value="Send">
               Submit Here
             </button>
           </form>

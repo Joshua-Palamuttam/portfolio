@@ -8,7 +8,7 @@ const About = ({
     about: { nodes },
   },
 }) => {
-  const { info, stack, title, image } = nodes[0]
+  const { info, Language, title, image } = nodes[0]
   return (
     <Layout>
       <section className="about-page">
@@ -18,7 +18,7 @@ const About = ({
             <Title title={title} />
             <p>{info}</p>
             <div className="about-stack">
-              {stack.map(item => {
+              {Language.map(item => {
                 return <span key={item.id}>{item.title}</span>
               })}
             </div>
@@ -32,7 +32,7 @@ export const query = graphql`
   {
     about: allStrapiAbout {
       nodes {
-        stack {
+        Language {
           id
           title
         }

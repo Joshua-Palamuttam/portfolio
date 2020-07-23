@@ -16,12 +16,16 @@ const Project = ({ description, title, github, stack, url, image, index }) => {
           })}
         </div>
         <div className="project-links">
-          <a href={github} target="_blank">
-            <FaGithubSquare className="project-icon" />
-          </a>
-          <a href={url} target="_blank">
-            <FaShareSquare className="project-icon" />
-          </a>
+          {github && (
+            <a href={github} target="_blank">
+              <FaGithubSquare className="project-icon" />
+            </a>
+          )}
+          {url && (
+            <a href={url} target="_blank">
+              <FaShareSquare className="project-icon" />
+            </a>
+          )}
         </div>
       </div>
     </article>

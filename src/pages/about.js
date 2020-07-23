@@ -8,7 +8,15 @@ const About = ({
     about: { nodes },
   },
 }) => {
-  const { info, Language, title, image } = nodes[0]
+  const {
+    info,
+    Language,
+    Framework,
+    Tools,
+    Certifications,
+    title,
+    image,
+  } = nodes[0]
   return (
     <Layout>
       <section className="about-page">
@@ -18,7 +26,29 @@ const About = ({
             <Title title={title} />
             <p>{info}</p>
             <div className="about-stack">
+              <h4>Languages:</h4>{" "}
               {Language.map(item => {
+                return <span key={item.id}>{item.title}</span>
+              })}
+            </div>
+            <br></br>
+            <div className="about-stack">
+              <h4>Frameworks:</h4>{" "}
+              {Framework.map(item => {
+                return <span key={item.id}>{item.title}</span>
+              })}
+            </div>
+            <br></br>
+            <div className="about-stack">
+              <h4>Tools:</h4>{" "}
+              {Tools.map(item => {
+                return <span key={item.id}>{item.title}</span>
+              })}
+            </div>
+            <br></br>
+            <div className="about-stack">
+              <h4>Certifications:</h4>{" "}
+              {Certifications.map(item => {
                 return <span key={item.id}>{item.title}</span>
               })}
             </div>
@@ -33,6 +63,18 @@ export const query = graphql`
     about: allStrapiAbout {
       nodes {
         Language {
+          id
+          title
+        }
+        Certifications {
+          id
+          title
+        }
+        Tools {
+          id
+          title
+        }
+        Framework {
           id
           title
         }

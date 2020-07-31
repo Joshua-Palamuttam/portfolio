@@ -37,7 +37,7 @@ Project.propTypes = {
   github: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  image: PropTypes.object.isRequired,
+  //image: PropTypes.object.isRequired,
   stack: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
 

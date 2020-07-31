@@ -2,7 +2,7 @@ import React from "react"
 import Title from "./Title"
 import { FaAngleDoubleRight } from "react-icons/fa"
 import { graphql, useStaticQuery } from "gatsby"
-import { Link } from "gatsby"
+import { resumeURL } from "../constants/socialLinks"
 
 const query = graphql`
   {
@@ -28,11 +28,10 @@ const Jobs = () => {
   } = data
   const [value, setValue] = React.useState(0)
   const { Company, Position, Date, desc } = jobs[value]
-  console.log(Company, Position, Date, desc)
 
   return (
     <section className="section jobs">
-      <Title title="Experiance" />
+      <Title title="Experience" />
       <div className="jobs-center">
         {/* btn container */}
         <div className="btn-container">
@@ -63,9 +62,9 @@ const Jobs = () => {
           })}
         </article>
       </div>
-      <Link to="/about" className="btn center-btn">
-        more info
-      </Link>
+      <a href={resumeURL} className="btn center-btn" target="_blank">
+        Resume
+      </a>
     </section>
   )
 }

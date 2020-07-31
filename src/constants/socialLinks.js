@@ -7,6 +7,9 @@ import {
   // FaTwitterSquare,
 } from "react-icons/fa"
 
+export const resumeURL =
+  "https://www.joshuapalamuttam.com/Joshua_Palamuttam_Resume"
+
 const data = [
   {
     id: 1,
@@ -38,9 +41,6 @@ const links = data.map(link => {
     </li>
   )
 })
-
-export const resumeURL =
-  "https://www.joshuapalamuttam.com/Joshua_Palamuttam_Resume"
 
 export default ({ styleClass }) => {
   return (

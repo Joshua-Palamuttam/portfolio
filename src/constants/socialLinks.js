@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa"
 
 export const resumeURL =
-  "https://www.joshuapalamuttam.com/Joshua_Palamuttam_Resume"
+  "https://www.joshuapalamuttam.com/Joshua_Palamuttam_Resume.pdf"
 
 const data = [
   {
